@@ -27,8 +27,63 @@ body {
     background-size: cover;
 }
 
+.profissionais-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 80px 8%;
+}
+
+.card-medico {
+    overflow: hidden;
+    border: 1px solid rgba(47, 58, 50, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+    text-align: center;
+    box-shadow: 0 8px 24px rgba(47, 58, 50, 0.08);
+}
+
+.card-medico img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.card-medico h3 {
+    margin: 20px 16px 6px;
+    color: #2f3a32;
+    font-size: 1.1rem;
+}
+
+.card-medico p {
+    margin: 0 16px 18px;
+    color: #68756b;
+    font-size: 0.9rem;
+}
+
+.btn-agendar {
+    margin-bottom: 24px;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: #6f9278;
+    font: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
 @media (max-width: 760px) {
     .hero {
         min-height: 420px;
+    }
+
+    .profissionais-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 56px 5%;
     }
 }
