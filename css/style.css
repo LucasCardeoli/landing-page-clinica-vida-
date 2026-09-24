@@ -2,12 +2,12 @@
 
 * {
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     background-color: #fff9ea;
 }
 
@@ -20,8 +20,8 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 520px;
-    background-image: url('../src/background.jpg');
+    min-height: calc(100vh - 96px);
+    background-image: url('../src/background.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -31,9 +31,11 @@ body {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 28px;
+    width: 100%;
     max-width: 1180px;
     margin: 0 auto;
     padding: 80px 8%;
+    justify-content: center;
 }
 
 .card-medico {
@@ -78,7 +80,7 @@ body {
 
 @media (max-width: 760px) {
     .hero {
-        min-height: 420px;
+        min-height: calc(100vh - 80px);
     }
 
     .profissionais-grid {
