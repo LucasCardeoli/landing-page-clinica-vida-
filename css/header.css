@@ -75,6 +75,7 @@
     #navbar {
         min-height: 48px;
         gap: 16px;
+        justify-content: space-between;
     }
 
     #navbar #nav_list,
