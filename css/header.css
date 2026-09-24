@@ -1,15 +1,8 @@
-:root {
-    --header-text: #2f3a32;
-    --header-accent: #6f9278;
-    --header-accent-dark: #55725d;
-    --header-border: rgba(47, 58, 50, 0.1);
-}
-
 .header {
     width: 100%;
     padding: 20px 8%;
     background-color: #fff9ea;
-    border-bottom: 1px solid var(--header-border);
+    border-bottom: 1px solid #e3e5df;
 }
 
 #navbar {
@@ -20,7 +13,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 32px;
+    gap: 30px;
 }
 
 #navbar .logo {
@@ -31,23 +24,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: clamp(18px, 3vw, 42px);
+    gap: 30px;
     margin: 0 auto;
     padding: 0;
     list-style: none;
 }
 
 .nav_link {
-    color: var(--header-text);
+    color: #2f3a32;
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.nav_link:hover,
-.nav_link:focus-visible {
-    color: var(--header-accent);
+    color: #2f3a32;
 }
 
 .btn-default,
@@ -56,20 +44,22 @@
     border-radius: 8px;
     padding: 11px 18px;
     color: #ffffff;
-    background-color: var(--header-accent);
+    background-color: #6f9278;
     font: inherit;
     font-size: 0.85rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav_link:hover {
+    color: #6f9278;
 }
 
 .btn-default:hover,
 .btn-mobile:hover,
 .btn-default:focus-visible,
 .btn-mobile:focus-visible {
-    background-color: var(--header-accent-dark);
-    transform: translateY(-2px);
+    background-color: #55725d;
 }
 
 .btn-mobile,
@@ -104,7 +94,7 @@
         max-width: 1180px;
         margin: 16px auto 0;
         padding-top: 16px;
-        border-top: 1px solid var(--header-border);
+        border-top: 1px solid #e3e5df;
         flex-direction: column;
         align-items: stretch;
         gap: 16px;

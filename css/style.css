@@ -16,11 +16,12 @@ body {
     height: auto;
     object-fit: contain;
     display: block;
+    cursor: pointer;
 }
 
 .hero {
     width: 100%;
-    min-height: calc(100vh - 96px);
+    height: 600px;
     background-image: url('../src/background.jpeg');
     background-position: center;
     background-repeat: no-repeat;
@@ -29,7 +30,7 @@ body {
 
 .profissionais-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 28px;
     width: 100%;
     max-width: 1180px;
@@ -78,14 +79,49 @@ body {
     cursor: pointer;
 }
 
+.footer {
+    padding: 48px 8%;
+    color: #fff9ea;
+    background-color: #2f3a32;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.footer-column h2 {
+    margin: 0 0 16px;
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.footer-column p {
+    margin: 6px 0;
+    color: #dce6d9;
+    font-size: 0.9rem;
+}
+
 @media (max-width: 760px) {
     .hero {
-        min-height: calc(100vh - 80px);
+        height: 420px;
     }
 
     .profissionais-grid {
         grid-template-columns: 1fr;
         gap: 24px;
         padding: 56px 5%;
+    }
+
+    .footer {
+        padding: 40px 5%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
     }
 }
