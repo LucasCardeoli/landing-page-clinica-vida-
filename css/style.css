@@ -17,3 +17,18 @@ body {
     object-fit: contain;
     display: block;
 }
+
+.hero {
+    width: 100%;
+    min-height: 520px;
+    background-image: url('../src/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 760px) {
+    .hero {
+        min-height: 420px;
+    }
+}
