@@ -20,7 +20,8 @@
     flex: 0 0 auto;
 }
 
-#nav_list {
+/* .nav_list era #nav_list: virou classe porque aparece 2 vezes na página */
+.nav_list {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -35,7 +36,6 @@
     font-size: 0.9rem;
     font-weight: 500;
     text-decoration: none;
-    color: #2f3a32;
 }
 
 .btn-default,
@@ -78,7 +78,7 @@
         justify-content: space-between;
     }
 
-    #navbar #nav_list,
+    #navbar .nav_list,
     #navbar .btn-default {
         display: none;
     }
@@ -90,7 +90,9 @@
         font-size: 0.75rem;
     }
 
-    #mobile_menu {
+    /* O menu mobile só aparece quando o script.js adiciona a classe "aberto" */
+    #mobile_menu.aberto {
+        display: flex;
         width: 100%;
         max-width: 1180px;
         margin: 16px auto 0;
@@ -101,7 +103,7 @@
         gap: 16px;
     }
 
-    #mobile_menu #nav_list {
+    #mobile_menu .nav_list {
         display: flex;
         flex-direction: column;
         align-items: stretch;

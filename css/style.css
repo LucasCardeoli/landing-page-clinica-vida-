@@ -106,7 +106,210 @@ body {
     font-size: 0.9rem;
 }
 
+/* Faixa final do rodapé com o acesso ao painel */
+.footer-admin {
+    display: flex;
+    justify-content: flex-end;
+    max-width: 1180px;
+    margin: 32px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Botão com contorno: discreto, mas com cara de botão (mesmo verde do site) */
+.footer-admin a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 9px 16px;
+    border: 1px solid #6f9278;
+    border-radius: 8px;
+    color: #dce6d9;
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.footer-admin svg {
+    width: 14px;
+    height: 14px;
+    flex: 0 0 auto;
+}
+
+.footer-admin a:hover,
+.footer-admin a:focus-visible {
+    border-color: #6f9278;
+    background-color: #6f9278;
+    color: #ffffff;
+    outline: none;
+}
+
 @media (max-width: 760px) {
+    .footer-admin {
+        justify-content: center;
+    }
+
+    .footer-admin a {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.btn-agendar:hover,
+.btn-agendar:focus-visible {
+    background-color: #55725d;
+}
+
+.sem-medicos {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: #68756b;
+}
+
+/* ===== Modal de agendamento ===== */
+body.modal-aberto {
+    overflow: hidden; /* impede a página de rolar por trás do modal */
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+    background-color: rgba(47, 58, 50, 0.6);
+}
+
+.modal[hidden] {
+    display: none;
+}
+
+.modal-caixa {
+    position: relative;
+    width: 100%;
+    max-width: 560px;
+    max-height: 100%;
+    overflow-y: auto;
+    padding: 28px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+}
+
+.modal-caixa h2 {
+    margin: 0 0 16px;
+    color: #2f3a32;
+    font-size: 1.3rem;
+}
+
+.modal-subtitulo {
+    margin: 22px 0 10px;
+    padding-top: 16px;
+    border-top: 1px solid #eef0ea;
+    color: #2f3a32;
+    font-size: 0.95rem;
+}
+
+.modal-fechar {
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    border: 0;
+    background: none;
+    color: #68756b;
+    font-size: 1.8rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.modal-fechar:hover {
+    color: #2f3a32;
+}
+
+.campo {
+    margin-bottom: 14px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    color: #2f3a32;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cfd6cc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid #6f9278;
+    border-color: #6f9278;
+}
+
+.campos-lado {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 14px;
+}
+
+.btn-enviar {
+    width: 100%;
+    margin: 6px 0 0;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+}
+
+.btn-enviar:disabled {
+    opacity: 0.7;
+    cursor: wait;
+}
+
+.msg {
+    margin-bottom: 16px;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.88rem;
+}
+
+.msg ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.msg-sucesso {
+    background-color: #e3f1e5;
+    border: 1px solid #9cc5a4;
+    color: #2d5a36;
+}
+
+.msg-erro {
+    background-color: #fbe7e5;
+    border: 1px solid #e3a59e;
+    color: #8a2c22;
+}
+
+@media (max-width: 760px) {
+    .campos-lado {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-caixa {
+        padding: 22px 18px;
+    }
+
     .hero {
         height: 420px;
     }
