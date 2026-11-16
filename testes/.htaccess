@@ -1,0 +1,2 @@
+# Os testes só rodam pelo terminal; bloqueia acesso pelo navegador
+Require all denied
