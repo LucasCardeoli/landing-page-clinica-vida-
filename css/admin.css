@@ -1,0 +1,388 @@
+/* =====================================================
+   Estilos da área administrativa
+   Mesmas cores do site: verde #6f9278, escuro #2f3a32, creme #fff9ea
+   ===================================================== */
+
+body.admin {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* ---------- Topo ---------- */
+.admin-header {
+    padding: 14px 5%;
+    background-color: #fff9ea;
+    border-bottom: 1px solid #e3e5df;
+}
+
+.admin-header-conteudo {
+    max-width: 1180px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.admin-marca {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #2f3a32;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.admin-marca .logo {
+    width: 48px;
+}
+
+.admin-menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.admin-menu a {
+    padding: 8px 12px;
+    border-radius: 8px;
+    color: #2f3a32;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.admin-menu a:hover {
+    background-color: #e8efe6;
+    color: #55725d;
+}
+
+.admin-menu .admin-menu-site {
+    border: 1px solid #6f9278;
+    color: #6f9278;
+}
+
+/* ---------- Conteúdo ---------- */
+.admin-conteudo {
+    flex: 1;
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 32px 5%;
+}
+
+.admin-conteudo h1 {
+    margin: 0 0 24px;
+    color: #2f3a32;
+    font-size: 1.6rem;
+}
+
+/* ---------- Mensagens ---------- */
+.alerta {
+    margin-bottom: 20px;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.alerta ul {
+    margin: 8px 0 0;
+    padding-left: 20px;
+}
+
+.alerta-sucesso {
+    background-color: #e3f1e5;
+    border: 1px solid #9cc5a4;
+    color: #2d5a36;
+}
+
+.alerta-erro {
+    background-color: #fbe7e5;
+    border: 1px solid #e3a59e;
+    color: #8a2c22;
+}
+
+.alerta-aviso {
+    background-color: #fff3d6;
+    border: 1px solid #e8c87a;
+    color: #6b4f0e;
+}
+
+/* ---------- Cards do painel ---------- */
+.painel-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.painel-card {
+    display: block;
+    padding: 24px;
+    border: 1px solid rgba(47, 58, 50, 0.1);
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(47, 58, 50, 0.08);
+    color: #2f3a32;
+    text-decoration: none;
+}
+
+.painel-card strong {
+    display: block;
+    font-size: 2rem;
+    color: #6f9278;
+}
+
+.painel-card:hover {
+    border-color: #6f9278;
+}
+
+/* ---------- Tabelas ---------- */
+.tabela-container {
+    overflow-x: auto;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(47, 58, 50, 0.08);
+}
+
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.tabela th,
+.tabela td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid #eef0ea;
+    color: #2f3a32;
+}
+
+.tabela th {
+    background-color: #2f3a32;
+    color: #fff9ea;
+    font-weight: 600;
+}
+
+.tabela tr:hover td {
+    background-color: #f7f9f5;
+}
+
+/* ---------- Formulários ---------- */
+.formulario {
+    max-width: 640px;
+    padding: 28px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(47, 58, 50, 0.08);
+}
+
+.form-grupo {
+    margin-bottom: 18px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 6px;
+    color: #2f3a32;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.form-grupo input,
+.form-grupo select,
+.form-grupo textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cfd6cc;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    background-color: #ffffff;
+}
+
+.form-grupo input:focus,
+.form-grupo select:focus,
+.form-grupo textarea:focus {
+    outline: 2px solid #6f9278;
+    border-color: #6f9278;
+}
+
+/* ---------- Botões ---------- */
+.botao {
+    display: inline-block;
+    border: 0;
+    border-radius: 8px;
+    padding: 10px 16px;
+    color: #ffffff;
+    background-color: #6f9278;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.botao:hover {
+    background-color: #55725d;
+}
+
+.botao-secundario {
+    background-color: #e8efe6;
+    color: #2f3a32;
+}
+
+.botao-secundario:hover {
+    background-color: #d6e1d3;
+}
+
+.botao-perigo {
+    background-color: #c0473a;
+}
+
+.botao-perigo:hover {
+    background-color: #9c3529;
+}
+
+.botao-pequeno {
+    padding: 6px 10px;
+    font-size: 0.78rem;
+}
+
+/* ---------- Listagens ---------- */
+.barra-acoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.acoes {
+    white-space: nowrap;
+}
+
+.miniatura {
+    display: block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.miniatura-vazia {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #eef0ea;
+    color: #68756b;
+}
+
+.miniatura-grande {
+    width: 96px;
+    height: 96px;
+    margin-bottom: 6px;
+}
+
+.etiqueta {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.etiqueta-ativo {
+    background-color: #e3f1e5;
+    color: #2d5a36;
+}
+
+.etiqueta-inativo {
+    background-color: #eef0ea;
+    color: #68756b;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.form-check input {
+    width: auto;
+}
+
+.form-check label {
+    margin: 0;
+}
+
+.form-grupo small {
+    display: block;
+    margin-bottom: 6px;
+    color: #68756b;
+    font-size: 0.8rem;
+}
+
+.form-busca {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-left: auto;
+}
+
+.form-busca input {
+    min-width: 0;
+    width: 260px;
+    max-width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #cfd6cc;
+    border-radius: 8px;
+    font-size: 0.85rem;
+}
+
+.contagem {
+    color: #68756b;
+    font-size: 0.85rem;
+}
+
+/* Filtros dos agendamentos */
+.form-filtros {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px 16px;
+    align-items: end;
+    margin-bottom: 20px;
+    padding: 18px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 8px 24px rgba(47, 58, 50, 0.08);
+}
+
+.form-filtros .form-grupo {
+    margin: 0;
+}
+
+.form-filtros-botoes {
+    display: flex;
+    gap: 8px;
+}
+
+.observacao {
+    max-width: 240px;
+    color: #68756b;
+    font-size: 0.8rem;
+}
+
+/* Cores de cada status */
+.status-agendado   { background-color: #e5eef8; color: #2a4f7a; }
+.status-confirmado { background-color: #e3f1e5; color: #2d5a36; }
+.status-cancelado  { background-color: #fbe7e5; color: #8a2c22; }
+.status-realizado  { background-color: #eef0ea; color: #4a554d; }
+
+/* ---------- Rodapé ---------- */
+.admin-rodape {
+    padding: 18px 5%;
+    text-align: center;
+    background-color: #2f3a32;
+    color: #dce6d9;
+    font-size: 0.8rem;
+}
